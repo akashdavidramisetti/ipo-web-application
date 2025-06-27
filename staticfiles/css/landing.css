@@ -1,0 +1,276 @@
+:root {
+  --primary: #3b82f6;
+  --danger: #ef4444;
+  --gray-bg: #fafafa;
+  --gray-border: #eee;
+  --gray-text: #888;
+  --font-main: 'Inter', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--gray-bg);
+  margin: 0;
+  color: #222;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background: #fff;
+  border-bottom: 2px solid #eee;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: 40px;
+}
+
+.nav a {
+  color: #888;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #222;
+}
+
+.nav-arrow {
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
+.nav-external {
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.signin {
+  color: #888;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: #3b5bfd;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn--primary:hover {
+  background: #2a3eb1;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  color: #222;
+  margin-left: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs {
+  font-size: 0.95rem;
+  color: var(--gray-text);
+  margin: 18px 32px 0 32px;
+}
+
+.breadcrumbs a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.main-title {
+  font-size: 2rem;
+  margin: 32px 0 8px 0;
+  font-weight: 700;
+}
+
+.disclaimer {
+  color: var(--gray-text);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.ipo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.ipo-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 320px;
+}
+
+.ipo-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ipo-card__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.ipo-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ipo-card__details {
+  font-size: 0.98rem;
+  color: #444;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+}
+.ipo-card__details span {
+  display: block;
+  font-size: 0.85em;
+  color: var(--gray-text);
+  font-weight: 500;
+}
+
+.ipo-card__actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.btn--primary {
+  background: var(--danger);
+  color: #fff;
+}
+
+.faq {
+  margin-top: 48px;
+}
+
+.faq__title {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.faq__desc {
+  color: var(--gray-text);
+  font-size: 1rem;
+}
+
+.faq-list {
+  margin-top: 18px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px #0001;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.faq-item.active {
+  box-shadow: 0 2px 12px #0002;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  color: #222;
+  position: relative;
+  transition: background 0.2s;
+}
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 24px;
+  font-size: 1.2rem;
+  color: var(--gray-text);
+  transition: transform 0.2s;
+}
+.faq-item.active .faq-question::after {
+  content: '-';
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 18px 18px 18px;
+  color: #444;
+  font-size: 0.98rem;
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.footer {
+  margin-top: 64px;
+  background: #fff;
+  padding: 36px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #222;
+  border-top: 1px solid var(--gray-border);
+}

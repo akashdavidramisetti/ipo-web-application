@@ -1,0 +1,387 @@
+/* Basic styles */
+body {
+    font-family: 'Inter', sans-serif; /* Assuming Inter font from previous design */
+    margin: 0;
+    background-color: #F8F9FA;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #F8F9FA;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #4E46E5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4E46E5;
+}
+
+.menu p {
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #344054;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.menu li.active a {
+    background-color: #E0E7FF;
+    color: #4E46E5;
+}
+
+.menu li a i {
+    margin-right: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    width: 300px;
+    border: 1px solid #E0E7FF;
+}
+
+.search-bar i {
+    color: #6B7280;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #E0E7FF;
+    color: #4E46E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.user-info span {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.user-info i {
+    color: #6B7280;
+    margin-left: 10px;
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.ipo-dashboard-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.ipo-dashboard-card .subtitle {
+    color: #10B981;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.ipo-dashboard-card .subtitle i {
+    margin-right: 5px;
+}
+
+.ipo-charts {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-circle {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 10px;
+}
+
+.chart-circle .chart-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-circle .chart-value {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.chart-circle .chart-label {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.chart-circle.purple {
+    border-color: #A78BFA;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 40px;
+    z-index: 2;
+}
+.chart-circle.purple .chart-value { color: #1F2937; }
+
+.chart-circle.orange {
+    border-color: #FBBF24;
+    width: 140px;
+    height: 140px;
+    top: 40px;
+    left: 110px;
+    z-index: 1;
+}
+.chart-circle.orange .chart-value { color: #1F2937; }
+
+.chart-circle.cyan {
+    border-color: #22D3EE;
+    width: 120px;
+    height: 120px;
+    top: 80px;
+    left: 20px;
+    z-index: 3;
+}
+.chart-circle.cyan .chart-value { color: #1F2937; }
+
+.quick-links-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.quick-links-card .subtitle {
+    color: #6B7280;
+    margin: 0 0 20px;
+    font-size: 14px;
+}
+
+.quick-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.quick-links-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.quick-links-list img {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+
+.quick-links-list span {
+    flex: 1;
+    font-weight: 500;
+}
+
+.quick-links-list a {
+    color: #4E46E5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-board-ipo-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.main-board-ipo-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.main-board-ipo-card .subtitle {
+    color: #6B7280;
+    margin: 0;
+    font-size: 14px;
+}
+
+.view-report-btn {
+    background-color: #F8F9FA;
+    border: 1px solid #E0E7FF;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: #4E46E5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.doughnut-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.doughnut-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(#A78BFA 0% 30%, #60A5FA 30% 80%, #7DD3FC 80% 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-center {
+    width: 120px;
+    height: 120px;
+    background-color: #374151;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.chart-center-value {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: space-around;
+}
+
+.legend-item {
+    text-align: center;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.legend-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #6B7280;
+}
+.legend-item p:last-child {
+    font-weight: 600;
+    color: #1F2937;
+}
+
+.purple-dot { background-color: #A78BFA; }
+.blue-dot { background-color: #60A5FA; }
+.lightblue-dot { background-color: #7DD3FC; } 

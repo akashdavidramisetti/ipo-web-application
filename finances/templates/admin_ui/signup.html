@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluestock Sign Up</title>
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="signup-card">
+      <div class="logo-section">
+        <!-- Placeholder SVG logo -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="32" width="8" height="12" rx="2" fill="#6C63FF"/>
+          <rect x="20" y="20" width="8" height="24" rx="2" fill="#6C63FF"/>
+          <rect x="36" y="8" width="8" height="36" rx="2" fill="#6C63FF"/>
+        </svg>
+        <h1 class="logo-text">BLUESTOCK</h1>
+      </div>
+      <form class="signup-form" method="POST" action="{% url 'admin-signup' %}">
+  {% csrf_token %}
+
+  <label for="name">Full Name</label>
+  <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+
+  <label for="password">Password</label>
+  <div class="password-input-wrapper">
+    <input type="password" id="password" name="password" required>
+    <span class="toggle-password" id="togglePassword">
+      <!-- your SVG here -->
+    </span>
+  </div>
+
+  <label for="confirm-password">Confirm Password</label>
+  <div class="password-input-wrapper">
+    <input type="password" id="confirm-password" name="confirm_password" required>
+    <span class="toggle-password" id="toggleConfirmPassword">
+      <!-- your SVG here -->
+    </span>
+  </div>
+
+  <div class="checkbox-row">
+    <input type="checkbox" id="terms" required>
+    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+  </div>
+
+  <button type="submit" class="signup-btn">Create Account</button>
+
+  <div class="divider">
+    <span>or sign up with</span>
+  </div>
+
+  <button type="button" class="google-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" class="google-logo">
+    Continue with Google
+  </button>
+
+  <a href="{% url 'admin-login' %}" class="signin-link">Already have an account? Sign in</a>
+
+  {% if messages %}
+    {% for message in messages %}
+      <p style="color: red;">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+</form>
+
+    </div>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>

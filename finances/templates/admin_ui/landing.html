@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bluestock - Upcoming IPOs</title>
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__left">
+      <img src="{% static 'images/profile.webp' %}" alt="Bluestock Logo" class="logo"/>
+
+      <span class="brand">BLUESTOCK</span>
+    </div>
+    <nav class="nav">
+      <a href="#">PRODUCTS</a>
+      <a href="#">PRICING</a>
+      <a href="#">COMMUNITY</a>
+      <a href="#">MEDIA <span class="nav-arrow">&#9660;</span></a>
+      <a href="#">SUPPORT <span class="nav-external">&#8599;</span></a>
+    </nav>
+    <div class="header__right">
+      <a href="{% url 'admin-login' %}" class="signin">Sign In</a>
+      <a href="{% url 'admin-signup' %}" class="btn btn--primary">Sign Up Now</a>
+      <span class="menu-icon">&#x1F5D2;</span>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <a href="#">Bluestock</a> &gt; <span>IPO / Upcoming IPO</span>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <h1 class="main-title">Upcoming IPO</h1>
+    <p class="disclaimer">Companies that have filed for IPOs from SEBI in the recent might be updated as they complete all docs.</p>
+    
+    <!-- IPO Cards Grid -->
+    <section class="ipo-grid">
+      <!-- Row 1 -->
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="{% static 'images/nova-logo.png' %}" alt="Nova Agritech Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">Nova Agritech Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Rs 39 - 41</div>
+          <div><span>OPEN</span> 2024-01-23</div>
+          <div><span>CLOSE</span> 2024-01-25</div>
+          <div><span>ISSUE SIZE</span> 143.81 Cr.</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> 2024-01-30</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="{% static 'images/epack-logo.jpg' %}" alt="EPACK Durable Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">EPACK Durable Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Rs 218 - 230</div>
+          <div><span>OPEN</span> 2024-01-19</div>
+          <div><span>CLOSE</span> 2024-01-23</div>
+          <div><span>ISSUE SIZE</span> 640.05 Cr.</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> 2024-01-29</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="rk-logo.png" alt="RK Swamy Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">RK Swamy Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> Not Issued</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="oyo-logo.png" alt="OYO Orawel Stays Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">OYO Orawel Stays Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> 8430 Cr.</div>
+          <div><span>ISSUE TYPE</span> Not Issued</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="boat-logo.png" alt="Imagine marketing Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">Imagine marketing Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> 2000 Cr.</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="kids-logo.png" alt="Kids Clinic India Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">Kids Clinic India Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> Not Issued</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <!-- Row 3 -->
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="ola-logo.png" alt="OLA Electric Mobility Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">OLA Electric Mobility Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> Not Issued</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="one-mob-logo.png" alt="One Mobikwik Systems Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">One Mobikwik Systems Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> 1900 Cr.</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="ixigo-logo.png" alt="Le Travenues Technology" class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">Le Travenues Technology</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> Not Issued</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <!-- Row 4 -->
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="cmr-logo.png" alt="CMR Green Technologies" class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">CMR Green Technologies</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> Not Issued</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="wellness-logo.png" alt="Wellness Forever" class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">Wellness Forever</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> Not Issued</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+      <div class="ipo-card">
+        <div class="ipo-card__header">
+          <img src="pkh-logo.png" alt="PKH Ventures Ltd." class="ipo-card__logo"/>
+          <h2 class="ipo-card__title">PKH Ventures Ltd.</h2>
+        </div>
+        <div class="ipo-card__details">
+          <div><span>PRICE BAND</span> Not Issued</div>
+          <div><span>OPEN</span> Not Issued</div>
+          <div><span>CLOSE</span> Not Issued</div>
+          <div><span>ISSUE SIZE</span> Not Issued</div>
+          <div><span>ISSUE TYPE</span> Book Built</div>
+          <div><span>LISTING DATE</span> Not Issued</div>
+        </div>
+        <div class="ipo-card__actions">
+          <button class="btn btn--ghost">RHP</button>
+          <button class="btn btn--primary">DRHP</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <h2 class="faq__title">Frequently Asked Questions?</h2>
+      <p class="faq__desc">Find answers to common questions that come in your mind related to IPO.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">How to Subscribe to an IPO?</button>
+          <div class="faq-answer">
+            <ul>
+              <li>Step 1: Login to your respective service provider.</li>
+              <li>Step 2: Click on the IPO button.</li>
+              <li>Step 3: Select the IPO you want to bid and enter the relevant details.</li>
+              <li>Step 4: Your subscription will be completed once you make the payment or give permission.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- ...repeat .faq-item for each question... -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <span>Add / Extend Footer</span>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/landing.js' %}"></script>
+</body>
+</html>

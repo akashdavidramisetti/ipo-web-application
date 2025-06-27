@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluestock Login</title>
+  <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="login-card">
+      <div class="logo-section">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="32" width="8" height="12" rx="2" fill="#6C63FF"/>
+          <rect x="20" y="20" width="8" height="24" rx="2" fill="#6C63FF"/>
+          <rect x="36" y="8" width="8" height="36" rx="2" fill="#6C63FF"/>
+        </svg>
+        <h1 class="logo-text">BLUESTOCK</h1>
+      </div>
+      <form class="login-form" method="POST">
+        {% csrf_token %}
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+
+        <div class="password-row">
+          <label for="password">Password</label>
+          <a href="/admin-panel/forgot-password/" class="forgot-password">Forgot Password?</a>
+        </div>
+        <div class="password-input-wrapper">
+          <input type="password" id="password" name="password" required>
+          <span class="toggle-password" id="togglePassword">
+            <svg width="20" height="20" fill="none" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </span>
+        </div>
+
+        <div class="recaptcha-placeholder">
+          <input type="checkbox" id="not-robot" checked disabled>
+          <label for="not-robot">I'm not a robot</label>
+          <div class="recaptcha-img">reCAPTCHA</div>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="keep-signed-in" checked>
+          <label for="keep-signed-in">Keep me signed in</label>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+        
+
+        <div class="divider">
+          <span>or sign in with</span>
+        </div>
+        <button type="button" class="google-btn" onclick="alert('Google login coming soon!')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="Google logo" class="google-logo">
+          Continue with Google
+        </button>
+        <a href="/admin-panel/signup/" class="create-account">Create an account</a>
+         {% csrf_token %}
+
+  {% if messages %}
+    {% for message in messages %}
+      <p style="color: red;">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+      </form>
+    </div>
+  </div>
+  {% load static %}
+  <script src="{% static 'js/signin.js' %}"></script>
+</body>
+</html>

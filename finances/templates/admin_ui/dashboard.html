@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestock Fintech Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">BF</div>
+                <span>Bluestock Fintech</span>
+            </div>
+            <nav class="menu">
+                <p>MENU</p>
+                <ul>
+                    <li class="active"><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
+                    <li><a href="{% url 'ipo-list' %}"><i class="icon-manage-ipo"></i> Manage IPO</a></li>
+                    <li><a href="#"><i class="icon-ipo-subscription"></i> IPO Subscription</a></li>
+                    <li><a href="#"><i class="icon-ipo-allotment"></i> IPO Allotment</a></li>
+                </ul>
+                <p>OTHERS</p>
+                <ul>
+                    <li><a href="#"><i class="icon-settings"></i> Settings</a></li>
+                    <li><a href="#"><i class="icon-api-manager"></i> API Manager</a></li>
+                    <li><a href="#"><i class="icon-accounts"></i> Accounts</a></li>
+                    <li><a href="#"><i class="icon-help"></i> Help</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar">
+                    <i class="icon-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="user-info">
+    <div class="user-avatar">{{ request.user.first_name|default:"U"|slice:":1" }}</div>
+    <span>Hi, {{ request.user.first_name|default:"User" }}</span>
+    <i class="icon-chevron-down"></i>
+    <i class="icon-notification"></i>
+</div>
+
+            </header>
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="dashboard-cards">
+                    <div class="card ipo-dashboard-card">
+                        <h3>IPO Dashboard India</h3>
+                        <p class="subtitle"><i class="icon-arrow-up"></i> 20 IPO in Gain</p>
+                        <div class="ipo-charts">
+                            <div class="chart-circle purple">
+                                <div class="chart-inner">
+                                    <div class="chart-value">9</div>
+                                    <div class="chart-label">IPO in Loss</div>
+                                </div>
+                            </div>
+                            <div class="chart-circle orange">
+                                <div class="chart-inner">
+                                    <div class="chart-value">30</div>
+                                    <div class="chart-label">Total IPO</div>
+                                </div>
+                            </div>
+                            <div class="chart-circle cyan">
+                                <div class="chart-inner">
+                                    <div class="chart-value">20</div>
+                                    <div class="chart-label">IPO in Gain</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card quick-links-card">
+                        <h3>Quick Links</h3>
+                        <p class="subtitle">Adipiscing elit, sed do eiusmod tempor</p>
+                        <ul class="quick-links-list">
+                            <li>
+                                <img src="assets/nse-logo.png" alt="NSE India">
+                                <span>NSE India</span>
+                                <a href="#">Visit Now</a>
+                            </li>
+                            <li>
+                                <img src="assets/bse-logo.png" alt="BSE India">
+                                <span>BSE India</span>
+                                <a href="#">Visit Now</a>
+                            </li>
+                            <li>
+                                <img src="assets/sebi-logo.png" alt="SEBI">
+                                <span>SEBI</span>
+                                <a href="#">Visit Now</a>
+                            </li>
+                            <li>
+                                <img src="assets/moneycontrol-logo.png" alt="Money Control">
+                                <span>Money Control</span>
+                                <a href="#">Visit Now</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card main-board-ipo-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Main Board IPO</h3>
+                                <p class="subtitle">From 01 Jan 2024</p>
+                            </div>
+                            <a href="#" class="view-report-btn">View Report</a>
+                        </div>
+                        <div class="doughnut-chart-container">
+                            <div class="doughnut-chart">
+                                <div class="chart-center">
+                                    <p>Afternoon</p>
+                                    <p>IPO NSE & BSE</p>
+                                    <p class="chart-center-value">15</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot purple-dot"></span>
+                                <p>Upcomming</p>
+                                <p>15</p>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot blue-dot"></span>
+                                <p>New Listed</p>
+                                <p>25</p>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot lightblue-dot"></span>
+                                <p>Ongoing</p>
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

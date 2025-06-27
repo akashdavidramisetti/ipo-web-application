@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestock Fintech - Manage IPO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">BF</span>
+                    <span>Bluestock Fintech</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="menu-group">
+                    <h3 class="menu-title">MENU</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                        <li class="active"><a href="#"><i class="fas fa-tasks"></i> Manage IPO</a></li>
+                        <li><a href="#"><i class="fas fa-file-signature"></i> IPO Subscription</a></li>
+                        <li><a href="#"><i class="fas fa-chart-pie"></i> IPO Allotment</a></li>
+                    </ul>
+                </div>
+                <div class="menu-group">
+                    <h3 class="menu-title">OTHERS</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="#"><i class="fas fa-cogs"></i> API Manager</a></li>
+                        <li><a href="#"><i class="fas fa-user-circle"></i> Accounts</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="user-profile">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </div>
+                    <div class="profile-info">
+                        <div class="avatar">V</div>
+                        <span>Hi, Vishal</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="content-header">
+                    <h1>Upcomming IPO Information</h1>
+                    <p>Manage your IPO Details</p>
+                    <div class="header-actions">
+                        <button class="btn btn-primary">Register</button>
+                        <button class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+
+                <div class="ipo-form-container">
+                    <div class="form-tabs">
+                        <div class="tab-item active">
+                            <i class="fas fa-info-circle"></i> IPO Information
+                        </div>
+                        <div class="tab-item">
+                            <i class="fas fa-list-alt"></i> IPO Info
+                        </div>
+                    </div>
+
+                    <form class="ipo-form">
+                        <h2 class="form-section-title">IPO Information</h2>
+                        <p class="form-section-subtitle">Enter IPO Details</p>
+
+                        <div class="form-group company-logo-group">
+                            <label>Company Logo</label>
+                            <div class="logo-upload-area">
+                                <div class="logo-preview">
+                                    <img src="https://img.icons8.com/color/48/000000/nse.png" alt="NSE India">
+                                    <div class="logo-text">
+                                        <strong>NSE India</strong>
+                                        <span>Tech Lead</span>
+                                        <span>Pune</span>
+                                    </div>
+                                </div>
+                                <div class="logo-buttons">
+                                    <button type="button" class="btn btn-upload">Upload Logo</button>
+                                    <button type="button" class="btn btn-delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" value="Vodafone Idea">
+                            </div>
+                            <div class="form-group">
+                                <label for="price-band">Price Band</label>
+                                <input type="text" id="price-band" value="Not Issued">
+                            </div>
+                            <div class="form-group">
+                                <label for="open-date">Open</label>
+                                <input type="text" id="open-date" value="Not Issued">
+                            </div>
+                            <div class="form-group">
+                                <label for="close-date">Close</label>
+                                <input type="text" id="close-date" value="Not Issued">
+                            </div>
+                            <div class="form-group">
+                                <label for="issue-size">Issue Size</label>
+                                <input type="text" id="issue-size" value="2300 Cr.">
+                            </div>
+                            <div class="form-group">
+                                <label for="issue-type">Issue Type</label>
+                                <select id="issue-type">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="listing-date-initial">Listing Date</label>
+                                <input type="text" id="listing-date-initial" value="Not Issued">
+                            </div>
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select id="status">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h3 class="form-subsection-title">NEW LISTED IPO DETAILS (WHEN IPO GET LISTED)</h3>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="ipo-price">IPO PRICE</label>
+                                <input type="text" id="ipo-price" value="₹ 383">
+                            </div>
+                            <div class="form-group">
+                                <label for="listing-price">LISTING PRICE</label>
+                                <input type="text" id="listing-price" value="₹ 435">
+                            </div>
+                            <div class="form-group">
+                                <label for="listing-gain">LISTING GAIN</label>
+                                <input type="text" id="listing-gain" value="13.58 %">
+                            </div>
+                            <div class="form-group">
+                                <label for="listing-date-final">LISTING DATE</label>
+                                <input type="date" id="listing-date-final" value="2024-05-30">
+                            </div>
+                            <div class="form-group">
+                                <label for="cmp">CMP</label>
+                                <input type="text" id="cmp" value="₹410">
+                            </div>
+                            <div class="form-group">
+                                <label for="current-return">CURRENT RETURN</label>
+                                <input type="text" id="current-return" value="7.05 %">
+                            </div>
+                            <div class="form-group">
+                                <label for="rhp">RHP</label>
+                                <input type="text" id="rhp" placeholder="Enter RHP PDF Link">
+                            </div>
+                            <div class="form-group">
+                                <label for="drhp">DRHP</label>
+                                <input type="text" id="drhp" placeholder="Enter DRHP PDF Link">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 
