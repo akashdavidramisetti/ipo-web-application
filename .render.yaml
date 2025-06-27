@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ipo-web-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn ipo_core.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        value: YOUR_POSTGRES_URL_HERE
