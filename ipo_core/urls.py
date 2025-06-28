@@ -4,6 +4,7 @@ from finances import views as fin_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', lambda request: HttpResponse("Welcome to IPO Web App")),
 
     # Include app-level routes
     path('', include('finances.urls')),

@@ -10,7 +10,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'dummy-fallback-key')
 # SECURITY WARNING: don’t run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['ipo-web-application-w541.onrender.com', 'localhost', '127.0.0.1']
  # Replace with your Render app domain
 
 # Application definition
