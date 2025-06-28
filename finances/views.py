@@ -55,18 +55,19 @@ def admin_signup(request):
 
 def admin_login(request):
     if request.method == "POST":
-        email = request.POST.get("email")
+        username = request.POST.get("username")  # <-- changed from email to username
         password = request.POST.get("password")
 
-        user = authenticate(request, username=email, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             return redirect("admin-dashboard")
         else:
-            messages.error(request, "Invalid email or password")
+            messages.error(request, "Invalid username or password")
             return redirect("admin-login")
 
     return render(request, "admin_ui/signin.html")
+
 
 def forgot_password(request):
     return render(request, "admin_ui/forgot_password.html")
